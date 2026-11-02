@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tokwatch"
+version = "0.1.0"
+description = "Cross-host AI coding CLI token usage watcher (Claude Code / Codex / omp). Zero dependencies."
+requires-python = ">=3.9"
+
+[project.scripts]
+tokwatch = "tokwatch.cli:main"
+tokwatch-claude-statusline = "tokwatch.cli:statusline_main"
+
+[tool.setuptools]
+packages = ["tokwatch", "tokwatch.sources"]
